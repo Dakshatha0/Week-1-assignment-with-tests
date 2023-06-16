@@ -9,7 +9,18 @@
 */
 
 function calculateTotalSpentByCategory(transactions) {
-  return [];
+  const Transaction = {};
+  for(let key in transactions) {
+    Transaction.push({transactions[category], "-", transactions[price]});
+  }
+  return Transaction;
 }
+
+const transactions = [{id:'nirma', category: 'washing powder', 
+                        price: 200, timestamp: 20123321},
+                       {id:'nivea', category: 'body wash', 
+                       price: 400, timestamp: 20123211}
+                      ]
+console.log(calculateTotalSpentByCategory(transactions));
 
 module.exports = calculateTotalSpentByCategory;
