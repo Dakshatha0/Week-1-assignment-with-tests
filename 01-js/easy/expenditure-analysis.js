@@ -9,18 +9,23 @@
 */
 
 function calculateTotalSpentByCategory(transactions) {
-  const Transaction = {};
-  for(let key in transactions) {
-    Transaction.push({transactions[category], "-", transactions[price]});
+  let result = [];
+  for(var i = 0; i < transactions.length; i++) {
+    let ans = -1;
+    for(var j = 0; j < result.length; j++) {
+      if(result[j].category === transactions[i].category) {
+        ans = j;
+        result[j].total_amount_spend += transactions[i].price;
+      }
+    }
+    if(ans == -1) {
+      let trans = {category:transactions[i].category,
+                  total_amount_spend:transactions[i].price
+                  };
+                  result.push(trans);
+    }
   }
-  return Transaction;
+  return result;
 }
-
-const transactions = [{id:'nirma', category: 'washing powder', 
-                        price: 200, timestamp: 20123321},
-                       {id:'nivea', category: 'body wash', 
-                       price: 400, timestamp: 20123211}
-                      ]
-console.log(calculateTotalSpentByCategory(transactions));
 
 module.exports = calculateTotalSpentByCategory;

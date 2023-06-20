@@ -56,10 +56,4 @@ class Calculator {
     }
 }
 
-var s = `10 + 2 - (4 * 5) * 7`
-const calculator = new Calculator();
-
-calculator.calculate(s);
-console.log(calculator.getResult());
-
 module.exports = Calculator;

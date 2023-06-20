@@ -17,9 +17,4 @@ function isPalindrome(str) {
   return true;
 }
 
-var str = "Abcba";
-var s = str.toLowerCase();
-console.log(isPalindrome(s));
-
-
 module.exports = isPalindrome;

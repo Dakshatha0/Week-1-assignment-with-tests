@@ -13,9 +13,4 @@ function isAnagram(str1, str2) {
   return str1 === str2;
 }
 
-var str1 = "anagram";
-var str2 = "nagaram";
-
-console.log(isAnagram(str1,str2));
-
 module.exports = isAnagram;
